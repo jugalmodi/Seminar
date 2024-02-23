@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #header {
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        #typed-name {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        #content {
+            max-width: 90%;
+            margin: auto;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            border-bottom: 2px solid #000000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .fadeIn {
+            animation-name: fadeIn;
+        }
+
+        .slideInUp {
+            animation-name: slideInUp;
+        }
+
+        .fadeInUp {
+            animation-name: fadeInUp;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            cursor: default;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Add a class to hide the icon */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Adjust styles for smaller screens if needed */
+            #content {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <title>Jugal Modi</title>
+</head>
+
+<body>
+    <a id="linkedin-icon" href="https://www.linkedin.com/in/jugal-modi/" target="_blank"
+        style="position: fixed; top: 10px; left: 10px; z-index: 999;">
+        <img src="https://myterraformawsproject.s3.amazonaws.com/linkedi_img.png"
+            alt="LinkedIn Profile" width="40" height="40" style="margin-right: 100px;">
+    </a>
+    <div id="header">
+
+        <h1 id="typed-name" class="animated fadeIn"></h1>
+        <script>
+            // JavaScript to type the name letter by letter
+            const nameElement = document.getElementById("typed-name");
+            const name = "Jugal Modi @ Dalhousie University";
+
+            let index = 0;
+
+            function type() {
+                if (index < name.length) {
+                    nameElement.innerHTML += name.charAt(index);
+                    index++;
+                    setTimeout(type, 100);
+                }
+            }
+            type();
+
+            // JavaScript to hide the LinkedIn icon on scroll
+            var linkedinIcon = document.getElementById('linkedin-icon');
+            var lastScrollTop = 0;
+
+            window.addEventListener('scroll', function () {
+                var st = window.scrollY;
+
+                if (st > lastScrollTop) {
+                    // Scrolling down, hide the icon
+                    linkedinIcon.classList.add('hidden');
+                } else {
+                    // Scrolling up, show the icon
+                    linkedinIcon.classList.remove('hidden');
+                }
+
+                lastScrollTop = st;
+            });
+        </script>
+
+    </div>
+
+    <div id="content">
+        <div class="section animated slideInUp">
+            <h2>Objective</h2>
+            <p>Seeking a challenging position in the field of technology that allows me to further develop my technical
+                skills while contributing to the goals of your organization.</p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li class="bold">Networking Concepts:</li>
+                <li>Switches, Routers, Basics of Security (ACL, Firewall Policies), TCP/IP, OSI Model, Routing Protocols
+                    (OSPF, RIP, BGP)</li>
+                <li class="bold">Embedded System:</li>
+                <li>ESP32</li>
+                <li class="bold">Programming and Scripting Languages:</li>
+                <li>Python</li>
+                <li class="bold">IDEs:</li>
+                <li>Spyder, PyCharm</li>
+                <li class="bold">Configuration and IAC Tool:</li>
+                <li>Ansible and Terraform</li>
+                <li class="bold">Networking Tools and Emulation Software:</li>
+                <li>Packet Tracer, Wireshark and Eve-ng</li>
+            </ul>
+        </div>
+
+        <div class="section animated fadeInUp">
+            <h2>Certifications</h2>
+            <ul>
+                <li><a
+                        href="https://www.credly.com/badges/935850d5-33eb-4dfe-829c-d6db198126e8/linked_in_profile">Certified
+                        in Cybersecurity (CC) by ISC2</a></li>
+                <li><a
+                        href="https://www.credly.com/badges/441b96ad-55b7-4379-8528-46a500accc78/linked_in_profile">AWS
+                        Knowledge: Cloud Essentials</a></li>
+                <li><a href="https://drive.google.com/file/d/1ex0c-3u8EBtSIRhTj5N640geak8XiTTB/view">NSE 1 by FORTINET</a>
+                </li>
+                <li><a
+                        href="https://www.credly.com/badges/412039c8-a827-46b7-958c-83f0444ead1d/linked_in_profile">CCNA:
+                        Switching, Routing, and Wireless Essentials by CISCO</a></li>
+                <li><a
+                        href="https://www.coursera.org/account/accomplishments/certificate/JFLPQRA3UXBU">The Bits and
+                        Bytes of Computer Networking (Google)</a></li>
+            </ul>
+        </div>
+
+        <div class="section animated fadeInUp">
+            <h2>Education</h2>
+            <ul>
+                <li class="bold">Masters of Engineering – Major in Internetworking, Dalhousie University, Halifax | Sept
+                    2022 – Present</li>
+
+                <li class="bold">Related Coursework:</li> Introduction to Computer Networks, Mathematics for
+                Internetworking, Physical and Data Standard and Protocols, TCP/IP, Telecommunications, Network
+                Architecture, Network Security, Emerging Technologies.</p>
+
+                <li class="bold">Bachelors in Technology – Major in Electronics and Communication (8.33CPI), Dharmsinh Desai
+                    University, India | Jun 2017 – May 2021</li>
+                <li class="bold">Related Coursework:</li> Digital Electronics | Linear Electronics, Python Basics, Image
+                Processing, Data and Computer Communication.</p>
+            </ul>
+        </div>
+
+        <div class="section animated fadeInUp">
+            <h2>Work Experience</h2>
+            <ul>
+                <li class="bold">Teaching Assistant at Dalhousie University | Sept 2023 – Oct 2023</li>
+            </ul>
+            <li>Assisting the lab instructor to conduct the labs in the subject of Introduction to Computer Networks.</li>
+            <li>Helping the students to perform the labs and help them troubleshoot technical problems they face while
+                configuring routers and switches.</li>
+            <li>Making sure that students understand the objective of labs and successfully complete the assigned
+                work.</li>
+            </ul>
+        </div>
+
+        <div class="section animated fadeInUp">
+            <h2>Internships</h2>
+            <ul>
+                <li class="bold">Internship at Allied Infosoft | Oct 2021 – Jun 2022</li></ul>
+            <li>Assisted Networking team with documentation, and daily activities.</li>
+            <ul>
+                <li class="bold">Summer Intern at eInfochips (An Arrow Company) | Jun 2020 – Jul 2020</li></ul>
+            <li>Learnt about the components in Fitbit Ionic other than semiconductor microchips and microprocessors that
+                make the gadgets smart.</li>
+        </div>
+
+        <div class="section animated fadeInUp">
+            <h2>Academic Projects</h2>
+            <ul>
+                <li class="bold">Implementing OSPF, BGP, Multicasting, and Ansible Automation at INWK CCTV Company (An
+                    anticipated company) | Jun 2023 – Jul 2023</li>
+                <li>Platform used: Eve-ng</li> Automation Tool: Ansible Team size: 2 At INWK CCTV Company, we have
+                    successfully implemented advanced networking techniques to enhance our infrastructure, and automated
+                    the configuration.</p>
+            </ul>
+            <ul>
+                <li class="bold">Object Extraction from a Video Clip | Dec 2020 – Apr 2021</p></li>
+                <li>Programming Language: Python</li> A GUI was developed in Python that accepts a video file as input and
+                    only displays the images on the screen that contain objects. Users of this GUI have the option of
+                    providing the video's path or simply browsing it via the browse button. Additionally, it offers a
+                    real-time feature.</li>
+            </ul>
+            <ul>
+                <li class="bold">Face Mask Detection | Aug 2020 – Nov 2020</li>
+                <li>Programming Language: Python</li> Additional Library: OpenCV The Python and OpenCV libraries will be
+                    used to carry out this project. In this case, I used a teachable machine to assist me train the
+                    model. The output of this model will be utilized to further regulate the movement of the gate by
+                    determining whether or not the individual in front of the camera is wearing a mask.</p>
+            </ul>
+            <ul>
+                <li class="bold">Public Garden Automation | Dec 2019 – Apr 2020</li>
+                <li>Programming Language used: C</li><li>Microcontroller used: ESP32</li><li> Team size: 2 </li>This
+                project attempts to automate the public gardens by adding features including a wifi-controlled gate, an
+                alarm system, automatic light on-off, and plant watering based on moisture content. We managed the
+                gate's opening and shutting times using the Blynk app.</p>
+            </ul>
+        </div>
+
+        <div class="section animated fadeInUp">
+            <h2>Personal Project</h2>
+            <ul>
+                <li class="bold">QR Based Attendance System | May 2020 – Jun 2020</p>
+                <li>Programming Language: Python</li> Python was used to implement this project. Every single member will
+                    receive a special QR code, and once they present it to the camera, their name will be added to an
+                    excel file in ascending order. The name of the excel sheet that is saved will include the current
+                    date and time.</li>
+            </ul>
+        </div>
+
+        <!-- Additional Sections Here -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+    <!-- ... (existing script imports) ... -->
+</body>
+
+</html>
